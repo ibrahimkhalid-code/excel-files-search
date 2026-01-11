@@ -32,6 +32,7 @@ def search_drive(drive):
                         0,
                         lambda p=full_path: excel_files_listbox.insert(tk.END, p),
                     )
+
                     root.after(
                         0,
                         lambda: count_label.config(
@@ -78,7 +79,9 @@ drives_entry.pack(pady=5)
 drives_entry.insert(0, "C:\\, D:\\")
 
 
-count_label = tk.Label(root, text="Found files: 0", font=("Arial", 10, "bold"))
+count_label = tk.Label(
+    root, text="Found files: 0", font=("Arial", 10, "bold"), fg="blue"
+)
 count_label.pack(pady=5)
 
 
